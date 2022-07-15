@@ -212,7 +212,7 @@ const MusicPlayer = ({ props }) => {
 					<br></br>
 					<hr></hr>
 					<p className="pt-2" style={{ color: "black" }}>
-						Thanks for using my app! Here's a cat for you.
+						Thanks for using my app! Here is a cat for you.
 					</p>
 					<p>
 						<img

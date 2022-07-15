@@ -107,7 +107,10 @@ const AppTable = ({ props }) => {
 					style={{ display: "flex", "flex-wrap": "wrap" }}
 				>
 					{data?.map((app, index) => (
-						<TrackCard props={[app.name, app.file, app.text]} />
+						<TrackCard
+							props={[app.name, app.file, app.text]}
+							key={index}
+						/>
 					))}
 
 					{/* Music track list */}
