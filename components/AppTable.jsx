@@ -176,7 +176,7 @@ const AppTable = ({ props }) => {
 									<option value="Joanna">Joanna - US</option>
 									<option value="Emma">Emma - British</option>
 									<option value="Ivy">Ivy - US</option>
-									<option value="Kendra">Kendra - US</option>
+									<option value="Kendra">Kendra - US </option>
 								</select>
 							</div>
 							<div className="form_step_content_input_file iosInputs mt-4">
