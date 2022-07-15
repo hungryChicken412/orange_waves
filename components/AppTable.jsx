@@ -97,7 +97,7 @@ const AppTable = ({ props }) => {
 						onClick={newTTS}
 					>
 						<span>
-							<i class="fa-solid fa-plus mx-1 "></i>
+							<i className="fa-solid fa-plus mx-1 "></i>
 						</span>
 						Create New
 					</button>
@@ -187,7 +187,7 @@ const AppTable = ({ props }) => {
 									onClick={submitForm}
 								>
 									<span>
-										<i class="fa-solid fa-plus mx-1 "></i>
+										<i className="fa-solid fa-plus mx-1 "></i>
 									</span>
 									Create New
 								</button>
