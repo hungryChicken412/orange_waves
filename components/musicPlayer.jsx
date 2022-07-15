@@ -111,11 +111,14 @@ const MusicPlayer = ({ props }) => {
 		<div className="lightmode">
 			<div className=" music-player" id="borderimg3">
 				<div className="media-controls">
-					<table class="player ">
-						{/* <td><input type="checkbox" id="love" /><label class="love smol" for="love"></label></td> */}
+					<table className="player ">
+						{/* <td><input type="checkbox" id="love" /><label className="love smol" htmlFor="love"></label></td> */}
 
 						<td className="player-btn-bg">
-							<label class="backward" for="backward"></label>
+							<label
+								className="backward"
+								htmlFor="backward"
+							></label>
 							<input
 								type="checkbox"
 								id="backward"
@@ -129,7 +132,7 @@ const MusicPlayer = ({ props }) => {
 								title="Play"
 								onClick={togglePlayPause}
 							/>
-							<label class="play" for="play"></label>
+							<label className="play" htmlFor="play"></label>
 						</td>
 						<td className="player-btn-bg">
 							<input
@@ -137,12 +140,15 @@ const MusicPlayer = ({ props }) => {
 								onInput={seekRight}
 								id="forward"
 							/>
-							<label class="forward" for="forward"></label>
+							<label
+								className="forward"
+								htmlFor="forward"
+							></label>
 						</td>
 
 						<td>
 							<button className="" onClick={showText}>
-								<i class="fa-solid fa-book"></i>
+								<i className="fa-solid fa-book"></i>
 							</button>
 						</td>
 					</table>

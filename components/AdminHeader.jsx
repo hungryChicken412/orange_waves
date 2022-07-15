@@ -29,18 +29,7 @@ const AdminHeader = ({ props }) => {
 						<i className="fa-regular fa-lightbulb"></i> New
 					</h1>
 				</div>
-				<div className="text-justify px-4">
-					Welcome to ReadOut! A one stop solution for your streaming
-					needs. Convert any document txt or pdf to a podcast in a
-					single click. Reading a book? an important letter or a memo?
-					whatever it may be, ReadOut is here to help you get the most
-					out of it. Just attach your file and we'll take care of the
-					rest.
-					<br />
-					Read out is completely free! So if you want to support,
-					kindly prefer donating! If you can't no worries! I still
-					love you :}
-				</div>
+				<div className="text-justify px-4"></div>
 				<form className="w-full">
 					<div className="form_step_content_input justify-center">
 						<div className="form_step_content_input_file">

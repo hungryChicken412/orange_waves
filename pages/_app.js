@@ -65,7 +65,7 @@ function MyApp({ Component, pageProps }) {
 			</AlertProvider>
 
 			<section>
-				<div class="curve"></div>
+				<div className="curve"></div>
 			</section>
 		</>
 	);

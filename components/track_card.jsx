@@ -27,17 +27,17 @@ const TrackCard = ({ props }) => {
 		<div className="card track-card ">
 			<div className="card-content neonText">{name}</div>
 			<div>
-				<table class="player">
+				<table className="player">
 					<td>
-						<span class="play" onClick={setNewTrack}></span>
+						<span className="play" onClick={setNewTrack}></span>
 					</td>
 					{/* <td>
 						<input type="checkbox" id="likeTrack_1" />
-						<label class="love" for="likeTrack_1"></label>
+						<label className="love" for="likeTrack_1"></label>
 					</td>
 					<td>
 						<input type="checkbox" id="shareTrack_1" />
-						<label class="shuffle" for="shareTrack_1"></label>
+						<label className="shuffle" for="shareTrack_1"></label>
 					</td> */}
 				</table>
 			</div>
