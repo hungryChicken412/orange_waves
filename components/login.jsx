@@ -39,12 +39,7 @@ const Login = () => {
 
 	return (
 		<>
-			<div
-				className="flex content-center items-center justify-center h-screen items-center"
-				style={{
-					background: "linear-gradient(0deg, #0a0f19, #06090f);",
-				}}
-			>
+			<div className="flex content-center items-center justify-center h-screen items-center">
 				<div className="w-full lg:w-4/12 px-4">
 					<div className="relative flex flex-col min-w-0 break-words w-full mb-6  rounded-lg  border-0 b p-3">
 						<div>
