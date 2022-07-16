@@ -157,7 +157,7 @@ const AppTable = ({ props }) => {
 									className="inputSelector"
 								>
 									<i className="fa fa-cloud-upload"></i>{" "}
-									Attach GoogleService-Info.plist
+									Attach a file 
 								</label>
 								<input
 									type="file"
