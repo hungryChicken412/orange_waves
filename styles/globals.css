@@ -1029,18 +1029,24 @@ border-radius: 4px;
 
 .card__back-square {
     position: absolute;
+    
     bottom: 15px;
     left: 15px;
 }
 
 .card:hover .card__front {
+
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
+
 
 }
 .card-content{
   font-size: x-large;
   font-weight: bold;
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card:hover .card__back {
