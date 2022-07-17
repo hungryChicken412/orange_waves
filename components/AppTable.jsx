@@ -150,6 +150,9 @@ const AppTable = ({ props }) => {
 				>
 					<div className="flex flex-wrap justify-center items-center w-full h-full">
 						<form>
+							<span>
+								Currently only English language is supported
+							</span>
 							<div className="form_step_content_input_file iosInputs mt-4">
 								<label
 									htmlFor="GoogleServiceFile"
@@ -157,7 +160,7 @@ const AppTable = ({ props }) => {
 									className="inputSelector"
 								>
 									<i className="fa fa-cloud-upload"></i>{" "}
-									Attach a file 
+									Attach a file
 								</label>
 								<input
 									type="file"
