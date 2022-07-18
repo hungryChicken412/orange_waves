@@ -20,7 +20,7 @@ export default function Register(props) {
 	var password = createRef();
 	var password2 = createRef();
 	const google_login_url =
-		"https://netive-backend.herokuapp.com/accounts/google/login";
+		"https://orange-waves.herokuapp.com/accounts/google/login";
 	var [submitting, setSubmitting] = useState(false);
 
 	const registerUser = (event) => {
@@ -70,7 +70,7 @@ export default function Register(props) {
 							<img src="/Untitled-1.png" className="w-full" />
 						</div>
 						<div className="rounded-t mb-0 px-6 py-6">
-							{/*<div className="btn-wrapper text-center">
+							<div className="btn-wrapper text-center">
 								<a
 									href="#"
 									onClick={click}
@@ -84,7 +84,7 @@ export default function Register(props) {
 									/>
 									Google
 								</a>
-							</div> */}
+							</div>
 							<hr className="mt-6 border-b-1 border-blueGray-300" />
 						</div>
 						<div className="flex-auto px-4 lg:px-10 py-10 pt-0">
