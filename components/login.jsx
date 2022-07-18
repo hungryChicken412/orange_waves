@@ -10,7 +10,7 @@ const Login = () => {
 	const alert = useAlert();
 	var [submitting, setSubmitting] = useState(false);
 	const google_login_url =
-		"https://netive-backend.herokuapp.com/accounts/google/login";
+		"https://orange-waves.herokuapp.com/accounts/google/login";
 	const router = useRouter();
 
 	var username = createRef();
