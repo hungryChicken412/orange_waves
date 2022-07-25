@@ -14,7 +14,7 @@ import { useAlert } from "react-alert";
 
 import CreditCard from "../components/CreditCard.jsx";
 
-export default function NewAppForm(props) {
+export default function BillingPage(props) {
 	const alert = useAlert();
 	const router = useRouter();
 	const [isAuthenticated, cookie] = customHelpers.checkAuth(

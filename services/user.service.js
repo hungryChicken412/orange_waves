@@ -10,7 +10,7 @@ import authheader from "../helpers/fetch-wrapper.js";
 import { useAlert } from "react-alert";
 
 const { publicRuntimeConfig } = getConfig();
-const baseHomeUrl = "https://orange-waves.herokuapp.com"; //'https://netive-backend.herokuapp.com/' // 'https://styx-ai.herokuapp.com'
+const baseHomeUrl = "https://orange-waves.herokuapp.com"; //'https://orange-waves.herokuapp.com'
 const baseUrl = baseHomeUrl + "/api-info";
 const userSubject = new BehaviorSubject(
 	process.browser && JSON.parse(localStorage.getItem("user"))

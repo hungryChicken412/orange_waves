@@ -61,7 +61,7 @@ const AppTable = ({ props }) => {
 			setSubmitting(true);
 			axios
 				.post(
-					"https://orange-waves.herokuapp.com/api-info/register/tts/", //https://netive-backend.herokuapp.com/api-info/register/app/
+					"https://orange-waves.herokuapp.com/api-info/register/tts/", //https://orange-waves.herokuapp.com
 					formData,
 					{ headers: { Authorization: `Token ${props[0].cookie}` } }
 				)
@@ -104,7 +104,11 @@ const AppTable = ({ props }) => {
 				</div>
 				<div
 					className="overflow-x-scroll w-full  "
-					style={{ display: "flex", "flex-wrap": "wrap" }}
+					style={{
+						display: "flex",
+						"flex-wrap": "wrap",
+						marginBottom: "10rem",
+					}}
 				>
 					{data?.map((app, index) => (
 						<TrackCard

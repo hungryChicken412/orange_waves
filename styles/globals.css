@@ -1920,7 +1920,6 @@ button {
 
   position: absolute;
   top:0;
-  height: 100%;
 
   
 
@@ -2022,7 +2021,51 @@ button {
     padding-bottom:20rem;
   }
 
+
+
+
+  .plan-banner{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+
+  .plan-image{
+    width: 50%;
+    height: 50%;
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }.plan-image img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+  }
   
+
+  .plan-thanks{
+    width:26rem;
+  }.plan-thanks h1{
+
+    font-size: 2rem;
+    font-weight: bold;
+    color: Black;
+    margin-bottom: 1rem;
+    
+  }
+
+
+  .plan-thanks p{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #6B7A90;
+    text-align: left;
+    margin-top: 1rem;
+    padding-bottom:4rem;
+  }
 
 
 

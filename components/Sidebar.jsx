@@ -56,6 +56,7 @@ const Sidebar = ({ props }) => {
 									</div>
 								</Link>
 							</div>
+
 							<div className="sidebar-link">
 								<Link href="/auth/login">
 									<div className="sidebar-icon">
