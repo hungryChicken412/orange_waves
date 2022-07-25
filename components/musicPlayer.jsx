@@ -197,14 +197,15 @@ const MusicPlayer = ({ props }) => {
 						Donec euismod, nisl eget consectetur sagittis, nisl nisi
 						consectetur nisi, euismod consectetur nisi nisi
 					</p>
-					<p style={{ color: "black" }}>
+					<p style={{ color: "black", marginTop: "20px" }}>
 						{/* Download link */}
 						<a
-							className=""
+							className="btn btn-custom p-3 mt-4"
 							id="mp3-download"
 							href="#"
 							target="_blank"
 							rel="noopener noreferrer"
+							style={{ color: "white" }}
 						>
 							Download Mp3{" "}
 						</a>

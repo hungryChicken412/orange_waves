@@ -83,44 +83,45 @@ const AppTable = ({ props }) => {
 	}
 
 	return (
-		<div className="max-w-screen-xl  mx-auto w-full">
-			<div className="  mx-4 overflow-x-hidden rounded-md">
-				<div className="container mx-auto flex w-full justify-left flex-wrap  items-center border-indigo-600	">
-					<h1 className="mx-2 text-blueGray-700 text-Left text-4xl font-ligh my-6 hover:underline neonText">
-						My Tracks
-					</h1>
+		<>
+			<div className="max-w-screen-xl  mx-auto w-full">
+				<div className="  mx-4 overflow-x-hidden rounded-md">
+					<div className="container mx-auto flex w-full justify-left flex-wrap  items-center border-indigo-600	">
+						<h1 className="mx-2 text-blueGray-700 text-Left text-4xl font-ligh my-6 hover:underline neonText">
+							My Tracks
+						</h1>
 
-					<button
-						type="button"
-						className="btn btn-custom-createnow flex text-white items-center md:display-none display-hide-md"
-						style={{ height: "40px" }}
-						onClick={newTTS}
+						<button
+							type="button"
+							className="btn btn-custom-createnow flex text-white items-center md:display-none display-hide-md"
+							style={{ height: "40px" }}
+							onClick={newTTS}
+						>
+							<span>
+								<i className="fa-solid fa-plus mx-1 "></i>
+							</span>
+							Create New
+						</button>
+					</div>
+					<div
+						className="overflow-x-scroll w-full  "
+						style={{
+							display: "flex",
+							"flex-wrap": "wrap",
+							marginBottom: "10rem",
+						}}
 					>
-						<span>
-							<i className="fa-solid fa-plus mx-1 "></i>
-						</span>
-						Create New
-					</button>
-				</div>
-				<div
-					className="overflow-x-scroll w-full  "
-					style={{
-						display: "flex",
-						"flex-wrap": "wrap",
-						marginBottom: "10rem",
-					}}
-				>
-					{data?.map((app, index) => (
-						<TrackCard
-							props={[app.name, app.file, app.text]}
-							key={index}
-						/>
-					))}
+						{data?.map((app, index) => (
+							<TrackCard
+								props={[app.name, app.file, app.text]}
+								key={index}
+							/>
+						))}
 
-					{/* Music track list */}
-				</div>
+						{/* Music track list */}
+					</div>
 
-				{/* <div className="container mx-auto my-5 flex w-full justify-between		">
+					{/* <div className="container mx-auto my-5 flex w-full justify-between		">
 					<h1 className="mx-2 text-blueGray-700 text-Left text-4xl font-light my-6 hover:underline neonText">
 						<span>
 							<i className="fa-solid fa-fire mx-4"></i>
@@ -139,87 +140,95 @@ const AppTable = ({ props }) => {
 						}
 					/>
 				</div> */}
-			</div>
+				</div>
 
-			<div
-				className="btn-floating display-show-md"
-				onClick={newTTS}
-			></div>
-
-			<div className="new-tts-form" id="new-tts-form">
-				<div className="btn-floating-x" onClick={newTTS}></div>
-				<div
-					className="container"
-					style={{ display: submitting ? "none" : "block" }}
-				>
-					<div className="flex flex-wrap justify-center items-center w-full h-full">
-						<form>
-							<span>
-								Currently only English language is supported
-							</span>
-							<div className="form_step_content_input_file iosInputs mt-4">
-								<label
-									htmlFor="GoogleServiceFile"
-									id="GoogleServiceFileLabel"
-									className="inputSelector"
-								>
-									<i className="fa fa-cloud-upload"></i>{" "}
-									Attach a file
-								</label>
-								<input
-									type="file"
-									className="input-file"
-									onChange={readGoogleService}
-									id="GoogleServiceFile"
-									ref={po_file}
+				<div className="new-tts-form" id="new-tts-form">
+					<div className="btn-floating-x" onClick={newTTS}></div>
+					<div
+						className="container"
+						style={{ display: submitting ? "none" : "block" }}
+					>
+						<div className="flex flex-wrap justify-center items-center w-full h-full">
+							<form>
+								<span>
+									Currently only English language is supported
+								</span>
+								<div className="form_step_content_input_file iosInputs mt-4">
+									<label
+										htmlFor="GoogleServiceFile"
+										id="GoogleServiceFileLabel"
+										className="inputSelector"
+									>
+										<i className="fa fa-cloud-upload"></i>{" "}
+										Attach a file
+									</label>
+									<input
+										type="file"
+										className="input-file"
+										onChange={readGoogleService}
+										id="GoogleServiceFile"
+										ref={po_file}
+									/>
+								</div>
+								<div className="form_step_content_input_file iosInputs mt-4">
+									<select
+										id="language"
+										className="p-4 border-2 px-8 rounded-lg border-gray-300 focus:outline-none focus:border-gray-500"
+									>
+										<option value="Justin">
+											Justin - US
+										</option>
+										<option selected value="Matthew">
+											Matthew - US
+										</option>
+										<option value="Joanna">
+											Joanna - US
+										</option>
+										<option value="Emma">
+											Emma - British
+										</option>
+										<option value="Ivy">Ivy - US</option>
+										<option value="Kendra">
+											Kendra - US{" "}
+										</option>
+									</select>
+								</div>
+								<div className="form_step_content_input_file iosInputs mt-4">
+									<button
+										type="button"
+										className="btn btn-custom-createnow flex text-white items-center "
+										style={{ height: "40px" }}
+										onClick={submitForm}
+									>
+										<span>
+											<i className="fa-solid fa-plus mx-1 "></i>
+										</span>
+										Create New
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div
+						className="container"
+						style={{ display: submitting ? "block" : "none" }}
+					>
+						<div className="flex flex-wrap justify-center items-center w-full h-full">
+							<div className="loader">
+								<img
+									src="https://icon-library.com/images/spinner-icon-gif/spinner-icon-gif-28.jpg"
+									className="w-full h-10 w-10"
 								/>
 							</div>
-							<div className="form_step_content_input_file iosInputs mt-4">
-								<select
-									id="language"
-									className="p-4 border-2 px-8 rounded-lg border-gray-300 focus:outline-none focus:border-gray-500"
-								>
-									<option value="Justin">Justin - US</option>
-									<option selected value="Matthew">
-										Matthew - US
-									</option>
-									<option value="Joanna">Joanna - US</option>
-									<option value="Emma">Emma - British</option>
-									<option value="Ivy">Ivy - US</option>
-									<option value="Kendra">Kendra - US </option>
-								</select>
-							</div>
-							<div className="form_step_content_input_file iosInputs mt-4">
-								<button
-									type="button"
-									className="btn btn-custom-createnow flex text-white items-center "
-									style={{ height: "40px" }}
-									onClick={submitForm}
-								>
-									<span>
-										<i className="fa-solid fa-plus mx-1 "></i>
-									</span>
-									Create New
-								</button>
-							</div>
-						</form>
-					</div>
-				</div>
-				<div
-					className="container"
-					style={{ display: submitting ? "block" : "none" }}
-				>
-					<div className="flex flex-wrap justify-center items-center w-full h-full">
-						<div className="loader">
-							<img
-								src="https://icon-library.com/images/spinner-icon-gif/spinner-icon-gif-28.jpg"
-								className="w-full h-10 w-10"
-							/>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+			<div
+				className="btn-floating display-show-md"
+				onClick={newTTS}
+			></div>
+		</>
 	);
 };
 
