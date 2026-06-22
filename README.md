@@ -1,34 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌊 Orange Waves
 
-## Getting Started
+<p align="left">
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Yarn-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white" alt="Yarn" />
+</p>
 
-First, run the development server:
+> **A visual chatbot maker using easy drag-and-drop nodes.**[cite: 1] 
+> Build, customize, and manage conversational flows without writing a single line of code.[cite: 1]
 
+**Orange Waves** is a modern SaaS platform designed to make chatbot creation accessible[cite: 1]. Built on top of a robust Next.js framework, it combines an intuitive visual builder with a full-featured administrative dashboard, subscription management, and user authentication[cite: 1].
+
+---
+
+## 🚀 Core Features
+
+* **Visual Node Editor:** Design complex conversational logic using an easy drag-and-drop interface[cite: 1].
+* **Full Authentication Flow:** Secure user registration, login, and email verification pipelines (`pages/auth/login.jsx`, `VerifyEmail.jsx`)[cite: 1].
+* **Admin & Analytics Dashboard:** Monitor performance and manage apps with dedicated dashboard metrics (`AdminHeader.jsx`, `StatCard.jsx`, `AppTable.jsx`)[cite: 1].
+* **Integrated Billing:** Seamless subscription handling and credit card management out of the box (`billing.jsx`, `NewSubscriptionPage.jsx`, `CreditCard.jsx`)[cite: 1].
+* **Deep Customization:** Personalize chatbot aesthetics directly from the dashboard using integrated styling tools (`ColorPicker.jsx`)[cite: 1].
+
+---
+
+## 💻 Tech Stack
+
+| Domain | Technologies Used |
+| :--- | :--- |
+| **Framework** | ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white) (`next.config.js`)[cite: 1] |
+| **Styling** | ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white) (`tailwind.config.js`, `postcss.config.js`)[cite: 1] |
+| **Package Manager** | ![Yarn](https://img.shields.io/badge/Yarn-2C8EBB?style=flat-square&logo=yarn&logoColor=white) (`yarn.lock`)[cite: 1] |
+| **Linting** | `eslint` (`.eslintrc.json` utilizing `next/core-web-vitals`)[cite: 1] |
+
+---
+
+## 📂 Project Structure Overview
+
+The repository is organized following Next.js best practices to separate UI components from business logic and page routing[cite: 1]:
+
+* **`/pages`**: Contains the application routes, including the main dashboard (`index.jsx`), app creation (`createApp.jsx`), and dedicated sub-directories for `/auth` and `/Subscription`[cite: 1].
+* **`/components`**: Reusable UI elements building the dashboard and tools (e.g., `Sidebar.jsx`, `Navbar.jsx`, `ColorPicker.jsx`)[cite: 1].
+* **`/services`**: Core business logic and external communications, including `user.service.js` and `alert.service.js`[cite: 1].
+* **`/helpers`**: Utility functions for data handling, API wrappers (`fetch-wrapper.js`), and form validation (`form-verifiers.js`)[cite: 1].
+* **`/styles`**: Global CSS and modular stylesheets for specific components (`CreateApp.module.css`, `Home.module.css`)[cite: 1].
+* **`/public`**: Static assets, SVGs, and branding materials[cite: 1].
+
+---
+
+## ⚙️ Local Development Setup
+
+### 1. Install Dependencies
+Ensure you have Yarn installed, then install the project dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+yarn install
